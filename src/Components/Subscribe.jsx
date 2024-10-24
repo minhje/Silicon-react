@@ -1,11 +1,13 @@
 import React from 'react'
+import SubscribeBell from '../images/Misc/notification.svg'
+
 
 const Subscribe = () => {
   return (
     <section id="subscribe">
     <div className="container">
         <div className="subscribe-content">
-            <img src="images/notification.svg" alt="Notification icon"/>
+            <img src={SubscribeBell} alt="Notification icon"/>
 
         <h2 id="sub-mobile">Subscribe to our newsletter </h2>
         <h2 id="sub-laptop">Subscribe to our newsletter to stay informed about latest updates</h2>

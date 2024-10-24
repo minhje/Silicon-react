@@ -1,11 +1,13 @@
 import React from 'react'
+import LogoLight from '../images/SiliconLogo/silicon-logo.svg'
+import LogoDark from '../images/SiliconLogo/silicon-logo-dark.svg'
 
 const Navbar = () => {
   return (
     <header>
         <div className="container">
    
-            <a id="logo" href="index.html"><img className="show-light" src="/images/silicon-logo.svg" alt="Silicon logotype"/><img className="show-dark" src="/images/silicon-logo-dark.svg" alt="Silicon logotype"/></a>
+            <a id="logo" href="index.html"><img className="show-light" src={LogoLight} alt="Silicon logotype"/><img className="show-dark" src={LogoDark} alt="Silicon logotype"/></a>
             
             <nav id="main-menu" className="navbar">
                <a className="nav-link" href="#features">Features</a>

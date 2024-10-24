@@ -1,4 +1,10 @@
 import React from 'react'
+import AppStoreLight from '../images/StoreButtons/appstore-light.svg'
+import AppStoreDark from '../images/StoreButtons/appstore-dark.svg'
+import GooglePlayLight from '../images/StoreButtons/googleplay-light.svg'
+import GooglePlayDark from '../images/StoreButtons/googleplay-dark.svg'
+import IphoneBudget from '../images/Iphones/iphone-budget.svg'
+import IphoneCards from '../images/Iphones/iphone-cards.svg'
 
 const Hero = () => {
   return (
@@ -13,13 +19,13 @@ const Hero = () => {
         
         <div className="buttons">
             <a className="btn-store" href="#">
-                <img className="show-light" src="/images/appstore-light.svg" alt="AppStore button"/>
-                <img className="show-dark" src="/images/appstore-dark.svg" alt="AppStore button"/>
+                <img className="show-light" src={AppStoreLight} alt="AppStore button"/>
+                <img className="show-dark" src={AppStoreDark} alt="AppStore button"/>
             </a> 
 
             <a className="btn-store" href="#">
-                <img className="show-light" src="/images/googleplay-light.svg" alt="Google Play button"/>
-                <img className="show-dark" src="/images/googleplay-dark.svg" alt="Google Play button"/>
+                <img className="show-light" src={GooglePlayLight} alt="Google Play button"/>
+                <img className="show-dark" src={GooglePlayDark} alt="Google Play button"/>
             </a> 
  
         </div>
@@ -36,8 +42,8 @@ const Hero = () => {
 </div>
         
         <div className="images">
-            <img className="iphone-budget" src="images/iphone-budget.svg" width="359" alt="iPhone with budget forecast" />
-            <img className="iphone-cards" src="images/iphone-cards.svg" width="359" alt="iPhone with transactions" />
+            <img className="iphone-budget" src={IphoneBudget} width="359" alt="iPhone with budget forecast" />
+            <img className="iphone-cards" src={IphoneCards} width="359" alt="iPhone with transactions" />
         </div>
         </div>
 </section>

@@ -1,4 +1,8 @@
 import React from 'react'
+import Transfer from '../images/Misc/transfer-send.svg'
+import TransferContacts from '../images/Misc/transfer-contacts.svg'
+import IconCard from '../images/Icons/card-icon.svg'
+import IconWallet from '../images/Icons/wallet-icon.svg'
 
 const Features2 = () => {
   return (
@@ -22,11 +26,11 @@ const Features2 = () => {
     </div>
 
     <div className="transfer-img">
-        <img src="images/transfer-send.svg" alt=""/>
+        <img src={Transfer} alt=""/>
     </div>
 
     <div className="contacts.img">
-        <img src="images/transfer-contacts.svg" alt=""/>
+        <img src={TransferContacts} alt=""/>
     </div>
 
         <div className="payments">
@@ -34,14 +38,14 @@ const Features2 = () => {
 
         <div className="payments-content">
         <div className="box-1">
-            <img src="images/card-icon.svg" alt=""/>
+            <img src={IconCard} alt=""/>
                 <div className="text-content">
                     <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
                 </div>
         </div>
 
         <div className="box-2">
-            <img src="images/wallet-icon.svg" alt=""/>
+            <img src={IconWallet} alt=""/>
                 <div className="text-content">
                     <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                 </div>
