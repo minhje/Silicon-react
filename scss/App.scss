@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 // ROOTS
-:root {
+:root[data-theme="light"] {
     --color-gray100: #F3F6FF;
     --color-gray200: #EFF2FC;
     --color-gray300: #E2E5F1;
@@ -39,8 +39,9 @@
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 }
+
 // DARKMODE FÄRGER & ÄNDRINGAR
-.dark {
+:root[data-theme="dark"] {
     --color-bg: var(--color-gray900);
     --color-bg-secondary: #ffffff04;
     --color-white-to-gray: rgba(255, 255, 255, 0.08);

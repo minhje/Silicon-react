@@ -14,7 +14,7 @@ const Subscribe = () => {
     </div>
 
     <div className="email-form">
-            <label className="form-label" for="email">Email adress</label>
+            <label className="form-label" htmlFor="email">Email adress</label>
             <i className="fa-regular fa-envelope"></i>
             <input className="form-input" type="email" name="emailAdress" id="email"
             required placeholder="Your email"/>

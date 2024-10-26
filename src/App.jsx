@@ -1,4 +1,4 @@
-import './css/App.css'
+import '../scss/css/App.css'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Features from './Components/Features'
@@ -14,15 +14,17 @@ function App() {
   
   return (
     <>
-     <Navbar />
-     <Hero />
-     <Features />
-     <Slider />
-     <Features2 />
-     <Testimonials />
-     <Faq />
-     <Subscribe />
-     <Footer />
+      <Navbar />
+     <main>
+        <Hero />
+        <Features />
+        <Slider />
+        <Features2 />
+        <Testimonials />
+        <Faq />
+        <Subscribe />
+     </main>
+      <Footer />
     </>
   )
 }

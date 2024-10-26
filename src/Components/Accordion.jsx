@@ -9,7 +9,7 @@ const Accordion = () => {
      {/* Accordion Item 1 */}
      <div className="accordion-item">
          <input type="checkbox" id="item1"/>
-         <label for="item1" className="accordion-title">Is any of my personal information
+         <label htmlFor="item1" className="accordion-title">Is any of my personal information
              stored in the App?  
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i>
@@ -40,7 +40,7 @@ const Accordion = () => {
      { /* Accordion Item 2 */ }
      <div className="accordion-item">
          <input type="checkbox" id="item2"/>
-         <label for="item2" className="accordion-title">What formats can I download my
+         <label htmlFor="item2" className="accordion-title">What formats can I download my
              transaction history in?
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i>
@@ -62,7 +62,7 @@ const Accordion = () => {
       {/* Accordion Item 3  */}
      <div className="accordion-item">
          <input type="checkbox" id="item3"/>
-         <label for="item3" className="accordion-title">Can I schedule future transfers?
+         <label htmlFor="item3" className="accordion-title">Can I schedule future transfers?
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i>
              </span>
@@ -81,7 +81,7 @@ const Accordion = () => {
      {/* Accordion Item 4 */}
      <div className="accordion-item">
          <input type="checkbox" id="item4"/>
-         <label for="item4" className="accordion-title">When can I use Banking App
+         <label htmlFor="item4" className="accordion-title">When can I use Banking App
              services?
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i>
@@ -105,7 +105,7 @@ const Accordion = () => {
       {/* Accordion Item 5  */}
      <div className="accordion-item">
          <input type="checkbox" id="item5"/>
-         <label for="item5" className="accordion-title">Can I create my own password that is
+         <label htmlFor="item5" className="accordion-title">Can I create my own password that is
              easy for me to remember?
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i></span>
@@ -122,7 +122,7 @@ const Accordion = () => {
       {/* Accordion Item 6 */}
         <div className="accordion-item">
          <input type="checkbox" id="item6"/>
-         <label for="item6" className="accordion-title">What happens if I forget or lose my
+         <label htmlFor="item6" className="accordion-title">What happens if I forget or lose my
              password?
              <span className="btn-circle-down">
                  <i className="fa-solid fa-chevron-down"></i>

@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoLight from '../images/SiliconLogo/silicon-logo.svg'
 import LogoDark from '../images/SiliconLogo/silicon-logo-dark.svg'
+import DarkmodeSwitch from './DarkmodeSwitch'
 
 const Navbar = () => {
   return (
@@ -13,13 +14,7 @@ const Navbar = () => {
                <a className="nav-link" href="#features">Features</a>
             </nav>
    
-            <div id="darkmode-toggle-switch" className="btn-toggle-switch">
-               <span className="label">Dark Mode</span>
-               <label for="darkmode-switch" className="toggle-switch" aria-label="Dark mode switch">
-                   <input id="darkmode-switch" type="checkbox"/>
-                   <span className="slider round"></span>
-               </label>
-            </div>
+            <DarkmodeSwitch />
    
             <a id="sign-in" href="#" className="btn-primary">
                <i className="fa-regular fa-user"></i>
