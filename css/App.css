@@ -224,7 +224,7 @@
   transition: var(--transition-time);
 }
 
-:root[data-theme=light] {
+:root {
   --color-gray100: #F3F6FF;
   --color-gray200: #EFF2FC;
   --color-gray300: #E2E5F1;
@@ -237,6 +237,12 @@
   --color-primary: #6366F1;
   --color-success: #22C55E;
   --color-white: #ffffff;
+  --font-weight-regular: 400;
+  --container-padding: 1rem;
+  --transition-time: all 0.2s;
+}
+
+:root[data-theme=light] {
   --color-bg: var(--color-white);
   --color-bg-secondary: var(--color-gray100);
   --color-white-to-gray: var(--color-white);

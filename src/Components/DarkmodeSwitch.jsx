@@ -79,7 +79,14 @@ const DarkmodeSwitch = () => {
     <span className="label">Dark Mode</span>
 
     <label htmlFor="darkmode-switch" className="toggle-switch">
-        <input id="darkmode-switch" type="checkbox" checked={isDarkmode} onChange={toggleDarkmode} />
+
+        <input 
+          id="darkmode-switch" 
+          type="checkbox" 
+          checked={isDarkmode} 
+          onChange={toggleDarkmode} 
+          />
+
         <span className="slider round"></span>
     </label>
  </div>
@@ -87,3 +94,5 @@ const DarkmodeSwitch = () => {
 }
 
 export default DarkmodeSwitch
+
+
