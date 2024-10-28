@@ -186,12 +186,10 @@
   bottom: 2.5px;
   background-color: white;
   transition: all 0.2s;
+  border-radius: 50%;
 }
 .btn-toggle-switch .toggle-switch .slider.round {
   border-radius: 35px;
-}
-.btn-toggle-switch .toggle-switch .slider.round::before {
-  border-radius: 50%;
 }
 
 .btn-mobile {

@@ -157,14 +157,15 @@
             bottom: 2.5px;
             background-color: white;
             transition: all 0.2s;
+            border-radius: 50%;
         }
 
         &.round {
             border-radius: 35px;
 
-            &::before {
-                border-radius: 50%
-            }
+            // &::before {
+            //     border-radius: 50%
+            // }
         }
     }
 }
