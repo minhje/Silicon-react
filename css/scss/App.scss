@@ -804,7 +804,7 @@ a {
         padding: var(--container-padding);
         padding-top: 2em;
         padding-bottom: 4em;
-        align-items: center;
+        
 
         @media (min-width: 1400px) {
             display: grid;
@@ -865,7 +865,7 @@ a {
     border-radius: 0.5em;
     }
 }
-.question {
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -874,10 +874,10 @@ a {
     background-color: var(--accordion-background);
     border-radius: 0.5rem 0.5rem 0 0;
     border-bottom: 0.5px solid var(--border-color);
-
     
     p {
         color: var(--color-text-heading-2);
+        text-align: left;
         font-weight: 600;
         font-size: 1.2rem;
     }
@@ -902,7 +902,7 @@ a {
     transition: all 300ms;
 }
 
-.answer {
+.content {
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
@@ -912,18 +912,27 @@ a {
     color: var(--color-text);
     text-align: left;
     font-size: 0.85rem;
-    border-bottom: 0.5px solid var(--border-color);
+
 
     @media (min-width: 768px) {
         border-bottom: 0;
+        border-top: 0;
         border-radius: 0.5rem;
+        
     }
 }
 
-.open .answer {
+.open .content {
     grid-template-rows: 1fr;
     padding-bottom: .7rem;
     padding-top: 1rem;
+    border-bottom: 1px solid var(--border-color);
+
+    @media (min-width: 768px) {
+        border-bottom: none;
+        border-top: 1px solid var(--border-color);
+        border-radius: 0;
+    }
 }
 
 .open .btn-round {
@@ -938,7 +947,6 @@ a {
 
 
 #contact-btn {
-    
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -947,6 +955,7 @@ a {
         display: none;
     }
 }
+
 p {
     text-align: center;
     font-size: 1rem;
