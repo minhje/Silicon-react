@@ -1,30 +1,54 @@
-import React from 'react'
-import TestimonialLight from '../images/Misc/testimonial.svg'
-import TestimonialDark from '../images/Misc/testimonial-dark.svg'
-import Testimonial2Light from '../images/Misc/testimonial-2.svg'
-import Testimonial2Dark from '../images/Misc/testimonial-2-dark.svg'
+import React, { useState, useEffect } from 'react';
 
 const Testimonials = () => {
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials');
+        const data = await res.json();
+        setReviews(data);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   return (
     <section id="testimonials">
-    <div className="container">
+      <div className="container">
 
-    <div className="headline">
-        <h2>Clients are Loving Our App</h2>
-    </div>
-    <div className="testimonial">
-        <img className="show-light" src={TestimonialLight} alt=""/>
-        <img className="show-dark" src={TestimonialDark} alt=""/>
-    </div>
-    <div className="testimonial-2">
-        <img className="show-light" src={Testimonial2Light} alt=""/>
-        <img className="show-dark" src={Testimonial2Dark} alt=""/>
-    </div>
+        <div className="headline">
+          <h2>Clients are Loving Our App</h2>
+        </div>
 
-    </div>
+        <div className="review"> 
+          
+           <div className="quote-marks">
+        <i className="fa-solid fa-quote-left"></i>
+        </div>
 
-</section>
-  )
-}
+          {reviews.map((item) => (
+            <div key={item.id} className="card">
+          
+              <div className="starRating"> 
+                {Array(item.starRating).fill().map((_, i) => (
+                  <i key={i} className="fa-solid fa-star"></i>
+                ))}
+              </div>
+              <p>{item.comment}</p>
+              <img src={item.avatar} alt={`${item.author}'s avatar`} />
+              <p>{item.author}</p>
+              <p>{item.jobRole}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Testimonials
+export default Testimonials;

@@ -792,6 +792,65 @@ a {
      }
  }
 
+ .quote-marks {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    background-color: var(--color-primary);
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px #00000010;
+    transform: translateX(20px) translateY(20px);
+
+    i {
+        font-size: 1.5rem;
+        color: var(--color-white);
+    }
+ }
+ .card {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    flex-direction: column;
+    width: 415px;
+    height: 330px;
+    background-color: var(--color-white-to-gray);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px #00000010;
+
+    .starRating {
+        margin-top: 2rem;
+        color: #FFBA08;
+    }
+
+    p {
+        color: var(--color-text-heading-2);
+        font-size: 1.1rem;
+        line-height: 160%;
+    }
+ }
+ .author {
+    display: flex;
+
+    .name-role {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 1rem;
+        
+        .name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .jobRole {
+            color: var(--color-text);
+            font-size: 0.9rem;
+        }
+    }
+ }
+
 }
 
 // --- FAQ ---

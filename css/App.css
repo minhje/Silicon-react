@@ -971,6 +971,58 @@ header #logo {
   font-weight: 800;
   padding-right: 5rem;
 }
+#testimonials .quote-marks {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  background-color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.062745098);
+  transform: translateX(20px) translateY(20px);
+}
+#testimonials .quote-marks i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+#testimonials .card {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  flex-direction: column;
+  width: 415px;
+  height: 330px;
+  background-color: var(--color-white-to-gray);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.062745098);
+}
+#testimonials .card .starRating {
+  margin-top: 2rem;
+  color: #FFBA08;
+}
+#testimonials .card p {
+  color: var(--color-text-heading-2);
+  font-size: 1.1rem;
+  line-height: 160%;
+}
+#testimonials .author {
+  display: flex;
+}
+#testimonials .author .name-role {
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+#testimonials .author .name-role .name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+#testimonials .author .name-role .jobRole {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
 
 #faq {
   background-color: var(--color-bg);
