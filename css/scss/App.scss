@@ -792,22 +792,11 @@ a {
      }
  }
 
- .quote-marks {
+ .review {
     display: flex;
-    height: 44px;
-    width: 44px;
-    background-color: var(--color-primary);
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 10px #00000010;
-    transform: translateX(20px) translateY(20px);
-
-    i {
-        font-size: 1.5rem;
-        color: var(--color-white);
-    }
- }
+    
+   
+}
  .card {
     margin: 0.5rem;
     display: flex;
@@ -820,8 +809,24 @@ a {
     border-radius: 0.5rem;
     box-shadow: 0 2px 10px #00000010;
 
+ .quote-marks {
+        display: flex;
+        height: 44px;
+        width: 44px;
+        background-color: var(--color-primary);
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px #00000010;
+        transform: translateX(10px) translateY(-40px);
+
+        i {
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+    }
     .starRating {
-        margin-top: 2rem;
+        margin-top: -3rem;
         color: #FFBA08;
     }
 
@@ -833,9 +838,10 @@ a {
  }
  .author {
     display: flex;
+    flex-direction: row;
 
     .name-role {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         margin-left: 1rem;
         
