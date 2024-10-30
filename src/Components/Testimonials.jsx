@@ -37,8 +37,11 @@ const Testimonials = () => {
             
               <div className="starRating"> 
                 {Array(item.starRating).fill().map((_, i) => (
-                  <i key={i} className="fa-solid fa-star"></i>
+                  <i key={`filled-${i}`} className="fa-solid fa-star"></i>
                 ))}
+                {/* Renderar tomma stjärnor vid mindre betyg än 5*/}
+                {Array(5 -item.starRating).fill().map((_, i) => (
+                  <i key={`empty-${i}`} className="fa-regular fa-star"></i>))} 
               </div>
               <p>{item.comment}</p>
 

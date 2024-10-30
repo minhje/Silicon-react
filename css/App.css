@@ -995,7 +995,7 @@ header #logo {
   align-items: center;
   border-radius: 0.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.062745098);
-  transform: translateX(10px) translateY(-40px);
+  transform: translateY(-45px);
 }
 #testimonials .card .quote-marks i {
   font-size: 1.5rem;
@@ -1004,6 +1004,9 @@ header #logo {
 #testimonials .card .starRating {
   margin-top: -3rem;
   color: #FFBA08;
+}
+#testimonials .card .starRating .fa-regular {
+  color: var(--color-gray600);
 }
 #testimonials .card p {
   color: var(--color-text-heading-2);
@@ -1024,7 +1027,7 @@ header #logo {
   font-weight: 700;
 }
 #testimonials .author .name-role .jobRole {
-  color: var(--color-text);
+  color: var(--color-gray600);
   font-size: 0.9rem;
 }
 
@@ -1250,7 +1253,7 @@ header #logo {
   grid-template-columns: 1fr auto;
   grid-template-areas: "text text" "email button";
   background-color: var(--color-bg-secondary);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   margin: 1rem;
   padding: var(--container-padding);
   padding-top: 3rem;
@@ -1258,7 +1261,7 @@ header #logo {
 }
 @media (min-width: 768px) {
   #subscribe .container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr auto;
     grid-template-areas: "text email button";
     align-items: center;
     justify-content: center;
@@ -1266,7 +1269,7 @@ header #logo {
 }
 #subscribe .container .subscribe-content {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 1rem;
   grid-area: text;
 }
@@ -1276,7 +1279,7 @@ header #logo {
   }
 }
 #subscribe .container #sub-mobile {
-  display: flexbox;
+  display: flex;
   grid-area: text;
   font-size: 1.3rem;
   font-weight: 800;
@@ -1311,7 +1314,7 @@ header #logo {
 }
 @media (min-width: 1400px) {
   #subscribe .container .email-form {
-    width: 330px;
+    width: 90%;
     justify-content: flex-start;
   }
 }
@@ -1347,16 +1350,27 @@ header #logo {
   border: 0.1px solid var(--border-color);
   border-left: none;
   height: 53px;
-}
-@media (min-width: 768px) {
-  #subscribe .container .btn-subscribe {
-    margin-bottom: 1rem;
-  }
+  font-size: 1rem;
+  font-family: "Manrope";
 }
 @media (min-width: 1400px) {
   #subscribe .container .btn-subscribe {
-    width: 142px;
+    width: 60%;
   }
+}
+#subscribe .info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#subscribe .info-box h1 {
+  color: var(--color-text-heading-2);
+}
+#subscribe .info-box button {
+  font-family: "Manrope";
+  width: 50%;
+  border: none;
+  margin-top: 1rem;
 }
 
 footer {
