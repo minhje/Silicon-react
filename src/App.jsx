@@ -1,31 +1,27 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import '../css/App.css/'
+
 import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-import Features from './Components/Features'
-import Slider from './Components/Slider'
-import Features2 from './Components/Features2'
-import Testimonials from './Components/Testimonials'
-import Faq from './Components/Faq'
-import Subscribe from './Components/Subscribe'
 import Footer from './Components/Footer'
+
+import Home from './views/Home'
+import Contact from './views/Contact'
+
 
 
 function App() {
   
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-     <main>
-        <Hero />
-        <Features />
-        <Slider />
-        <Features2 />
-        <Testimonials />
-        <Faq />
-        <Subscribe />
-     </main>
-      <Footer />
-    </>
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+        </main>
+     <Footer />
+    </BrowserRouter>
   )
 }
 

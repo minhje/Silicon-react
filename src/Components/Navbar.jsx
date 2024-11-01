@@ -2,16 +2,21 @@ import React from 'react'
 import LogoLight from '../images/SiliconLogo/silicon-logo.svg'
 import LogoDark from '../images/SiliconLogo/silicon-logo-dark.svg'
 import DarkmodeSwitch from './DarkmodeSwitch'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <header>
         <div className="container">
    
-            <a id="logo" href="index.html"><img className="show-light" src={LogoLight} alt="Silicon logotype"/><img className="show-dark" src={LogoDark} alt="Silicon logotype"/></a>
+            <Link id="logo" to="/">
+               <img className="show-light" src={LogoLight} alt="Silicon logotype"/>
+               <img className="show-dark" src={LogoDark} alt="Silicon logotype"/>
+            </Link>
             
             <nav id="main-menu" className="navbar">
-               <a className="nav-link" href="#features">Features</a>
+               <NavLink className="nav-link" to="/">Features</NavLink>
+               <NavLink className="nav-link" to="Contact">Contact</NavLink>
             </nav>
    
             <DarkmodeSwitch />

@@ -190,15 +190,20 @@ a {
         color: var(--color-text-heading);
         font-weight: 600;
         text-decoration: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        &:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
     }
-    .nav-link:hover {
-        color: var(--color-primary);
-        text-decoration: underline;
-    }
+    
     .active {
         color: var(--color-primary);
-        text-decoration: underline;
+        text-decoration: none;
     }
+
     #sign-in {
         display: none;
         
