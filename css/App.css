@@ -236,6 +236,7 @@
   --color-gray900: #0B0F19;
   --color-primary: #6366F1;
   --color-success: #22C55E;
+  --color-error: #EF4444;
   --color-white: #ffffff;
   --container-padding: 1rem;
   --transition-time: all 0.2s;
@@ -1320,12 +1321,25 @@ header #logo {
 }
 #subscribe .container .email-form i {
   position: absolute;
+  margin-top: 1rem;
   left: 1.2rem;
   color: var(--color-gray400);
   font-size: 1rem;
 }
-#subscribe .container .form-label {
+#subscribe .container .email-form .form-label {
   display: none;
+}
+#subscribe .container .form-group {
+  width: 100%;
+}
+#subscribe .container .form-group span {
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--color-error);
+  height: 1rem;
 }
 #subscribe .container .form-input {
   font-family: "Manrope";
@@ -1355,7 +1369,7 @@ header #logo {
 }
 @media (min-width: 1400px) {
   #subscribe .container .btn-subscribe {
-    width: 60%;
+    width: 40%;
   }
 }
 #subscribe .info-box {

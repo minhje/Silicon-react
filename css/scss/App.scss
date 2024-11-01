@@ -18,6 +18,7 @@
     
     --color-primary: #6366F1;
     --color-success: #22C55E;
+    --color-error: #EF4444;
     --color-white: #ffffff;
 
     --container-padding: 1rem;
@@ -1171,15 +1172,31 @@ p {
 
                 i {
                 position: absolute;
+                margin-top: 1rem;
                 left: 1.2rem;
                 color: var(--color-gray400);
                 font-size: 1rem;
                 }
+
+                .form-label {
+                    display: none;
+                }
         }
 
-        .form-label {
-            display: none;
+        .form-group {
+            width: 100%;
+
+            span {
+                position: absolute;
+                top: 100%;
+                left: 1rem;
+                margin-top: 0.2rem;
+                font-size: 0.7rem;
+                color: var(--color-error);
+                height: 1rem;
+            }
         }
+
         .form-input {
             font-family: "Manrope";
             background-color: var(--color-white-to-gray);
@@ -1206,9 +1223,10 @@ p {
             font-family: "Manrope";
 
             @media (min-width: 1400px) {
-                width: 60%;
+                width: 40%;
             }
         }
+
     }
 
     .info-box {
