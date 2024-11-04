@@ -252,6 +252,7 @@
   --color-text: var(--color-gray600);
   --border-color: var(--color-gray300);
   --btn-store-bg: var(--color-gray900);
+  --box-shadow: 0 2px 10px #00000010;
 }
 
 :root[data-theme=dark] {
@@ -263,7 +264,8 @@
   --color-text: var(--color-gray300);
   --border-color: rgba(255, 255, 255, 0.08);
   --btn-store-bg: var(--color-gray200);
-  --accordion-background: rgba(255, 255, 255, 0.04);
+  --accordion-background: #1A1E29;
+  --box-shadow: 0 2px 10px #ffffff10;
 }
 :root[data-theme=dark] .content h2 {
   opacity: 70%;
@@ -311,20 +313,17 @@ body {
   font-style: normal;
   font-size: 16px;
 }
-
-h1 {
+body h1 {
   color: var(--color-text-heading);
   text-wrap: balance;
   font-weight: 800;
 }
-
-h2, h3 {
+body h2, body h3 {
   color: var(--color-text-heading-2);
   text-wrap: balance;
   font-weight: 800;
 }
-
-p {
+body p {
   color: var(--color-text);
 }
 
@@ -542,7 +541,7 @@ header #logo {
   bottom: 0;
   right: 8rem;
   width: 70%;
-  box-shadow: -5px 150px 80px var(--color-gray900);
+  box-shadow: -5px 150px 80px var(--color-gray800);
 }
 @media (min-width: 1400px) {
   #hero .images .iphone-budget {
@@ -987,7 +986,7 @@ header #logo {
   height: 330px;
   background-color: var(--color-white-to-gray);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.062745098);
+  box-shadow: var(--box-shadow);
 }
 #testimonials .card .quote-marks {
   display: flex;
@@ -997,7 +996,7 @@ header #logo {
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.062745098);
+  box-shadow: var(--box-shadow);
   transform: translateY(-45px);
 }
 #testimonials .card .quote-marks i {
@@ -1387,6 +1386,102 @@ header #logo {
   width: 50%;
   border: none;
   margin-top: 1rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  font-size: 0.8rem;
+}
+.breadcrumb i {
+  margin: 1rem;
+}
+.breadcrumb .nav-link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.breadcrumb .nav-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.breadcrumb .active {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+#contact {
+  background-color: var(--color-bg-secondary);
+}
+#contact .grid-container {
+  height: 700px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "contact form";
+}
+#contact .grid-container h1 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+#contact .grid-container .contact-us {
+  grid-area: contact;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+#contact .grid-container .contact-us i {
+  color: var(--color-primary);
+  margin-left: 0.5rem;
+}
+#contact .grid-container .contact-us .text-content {
+  width: 60%;
+}
+#contact .grid-container .contact-us .text-content h3 {
+  margin-bottom: 0.8rem;
+}
+#contact .grid-container .contact-us .text-content p {
+  margin-bottom: 1rem;
+}
+#contact .grid-container .form-container {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 720px;
+  padding: 3rem;
+  margin: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--accordion-background);
+  box-shadow: var(--box-shadow);
+}
+#contact .grid-container .form-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+#contact .grid-container .form-container #consult-form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .grid-container .form-container #consult-form label {
+  font-size: 1rem;
+  color: var(--color-text-heading-2);
+  margin-bottom: 0.3rem;
+}
+#contact .grid-container .form-container #consult-form input, #contact .grid-container .form-container #consult-form select {
+  height: 50px;
+  background-color: var(--color-white-to-gray);
+  border: 1px solid var(--border-color);
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+#contact .grid-container .form-container #consult-form button {
+  border: transparent;
+  height: 50px;
+  margin-top: 12rem;
 }
 
 footer {

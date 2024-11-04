@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 
 import Home from './views/Home'
+import AppFeatures from './views/AppFeatures'
 import Contact from './views/Contact'
 
 
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />}/>
+          <Route path='/features' element={<AppFeatures />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
         </main>
