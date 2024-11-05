@@ -5,10 +5,11 @@ import GooglePlayLight from '../images/StoreButtons/googleplay-light.svg'
 import GooglePlayDark from '../images/StoreButtons/googleplay-dark.svg'
 import IphoneBudget from '../images/Iphones/iphone-budget.svg'
 import IphoneCards from '../images/Iphones/iphone-cards.svg'
+import Navbar from './Navbar'
 
 const Hero = () => {
   return (
-    <section id="hero">
+      <section id="hero">
         <div className="container"> 
             <div className="headline">
             <h1>Manage All Your Money in One App</h1>

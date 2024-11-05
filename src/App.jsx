@@ -21,7 +21,7 @@ function App() {
           <Route path='/features' element={<AppFeatures />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        </main>
+      </main>
      <Footer />
     </BrowserRouter>
   )
