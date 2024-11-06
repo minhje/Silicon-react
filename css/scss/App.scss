@@ -1353,6 +1353,7 @@ p {
         border-radius: 0.5rem;
         background-color: var(--accordion-background);
         box-shadow: var(--box-shadow);
+        transition: var(--transition-time);
 
         @media (max-width: 425px) {
             height: 80%;
@@ -1397,8 +1398,14 @@ p {
                 @media (max-width: 425px) {
                     font-size: 0.8rem;
                     height: 50%;
-                    margin-bottom: 1rem;
                 }
+            }
+
+            span {
+                margin-top: -2.5rem;
+                font-size: 0.8rem;
+                color: var(--color-error);
+                margin-bottom: 1.8rem;
             }
 
             button {
@@ -1414,6 +1421,19 @@ p {
                     font-size: 0.8rem;
                     height: 50%;
                 }
+            }
+        }
+
+        .thank-you {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem;
+            text-align: center;
+
+            button {
+                width: 50%;
+                margin-top: 3rem;
             }
         }
     }
@@ -1505,6 +1525,8 @@ p {
                     background-color: var(--color-bg-secondary);
                     color: var(--color-text-heading);
                     border-radius: 0.5rem;
+                    border: 1px solid var(--color-white-to-gray);
+                    cursor: pointer;
                 }
 
                 @media (max-width: 768px) {

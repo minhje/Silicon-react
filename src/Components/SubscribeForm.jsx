@@ -23,7 +23,7 @@ const SubscribeForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailRegex = /^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
         const newErrors = {}
         
         Object.keys(formData).forEach(field => {

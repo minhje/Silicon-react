@@ -194,7 +194,7 @@
 
 .btn-mobile {
   background-color: transparent;
-  color: var(--color-gray900);
+  color: var(--color-text-heading-2);
   border: none;
   font-size: 2rem;
 }

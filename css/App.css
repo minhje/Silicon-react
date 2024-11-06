@@ -196,7 +196,7 @@
 
 .btn-mobile {
   background-color: transparent;
-  color: var(--color-gray900);
+  color: var(--color-text-heading-2);
   border: none;
   font-size: 2rem;
 }
@@ -1472,6 +1472,7 @@ header #logo {
   border-radius: 0.5rem;
   background-color: var(--accordion-background);
   box-shadow: var(--box-shadow);
+  transition: var(--transition-time);
 }
 @media (max-width: 425px) {
   #contact .grid-container .form-container {
@@ -1516,8 +1517,13 @@ header #logo {
   #contact .grid-container .form-container #consult-form input, #contact .grid-container .form-container #consult-form select {
     font-size: 0.8rem;
     height: 50%;
-    margin-bottom: 1rem;
   }
+}
+#contact .grid-container .form-container #consult-form span {
+  margin-top: -2.5rem;
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-bottom: 1.8rem;
 }
 #contact .grid-container .form-container #consult-form button {
   border: transparent;
@@ -1534,6 +1540,17 @@ header #logo {
     font-size: 0.8rem;
     height: 50%;
   }
+}
+#contact .grid-container .form-container .thank-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
+#contact .grid-container .form-container .thank-you button {
+  width: 50%;
+  margin-top: 3rem;
 }
 
 #location {
@@ -1621,6 +1638,8 @@ header #logo {
   background-color: var(--color-bg-secondary);
   color: var(--color-text-heading);
   border-radius: 0.5rem;
+  border: 1px solid var(--color-white-to-gray);
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   #location .container .contact-info .social-media {
