@@ -1,4 +1,4 @@
-// Code from Hans video "Omvandla din befintliga JavaScript-kod till React", adjusted to fit my previous code. 
+// Kod från Hans video "Omvandla din befintliga JavaScript-kod till React", anpassad till att passa min befintliga kod. 
 
 import React, { useEffect, useState } from 'react'
 

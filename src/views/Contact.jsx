@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
 import Breadcrumb from '../Components/Breadcrumb'
 import ConsultationForm from '../Components/ConsultationForm'
 import ContactUs from '../Components/ContactUs'

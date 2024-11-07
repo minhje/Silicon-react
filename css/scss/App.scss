@@ -220,6 +220,42 @@ header {
    #logo {
        height: 3em;
    }
+
+   .mobile-menu {
+    position: relative; /* Behåll navbarens position */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 700%;
+    background-color: var(--color-bg);
+    box-shadow: var(--box-shadow);
+    border-top: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 1000; /* Så att den syns ovanför annan layout */
+    }
+  
+    .menu-dropdown .nav-link {
+    display: block;
+    padding: 8px 12px;
+    color: var(--color-text-heading);
+    text-decoration: none;
+    }
+  
+    .menu-dropdown .nav-link:hover {
+    color: var(--color-primary);
+  } 
+
+  @media (min-width: 1400px) {
+    display: none;
+  }
+}
+
 }
 // --- HERO ---
 #hero {
@@ -230,7 +266,12 @@ header {
 
     @media (min-width: 768px) {
        padding-bottom: 0;
+       padding-top: 3rem;
     }
+
+    @media (min-width: 1400px) {
+        padding-top: 0rem;
+     }
 
    
     .container {
@@ -1435,6 +1476,10 @@ p {
                 width: 50%;
                 margin-top: 3rem;
             }
+
+            @media (max-width: 768px) {
+                padding: 0;
+            }
         }
     }
     }
@@ -1445,6 +1490,7 @@ p {
 
     @media (max-width: 768px) {
         padding: 5rem;
+        padding-top: 10rem;
     }
 
     .container {

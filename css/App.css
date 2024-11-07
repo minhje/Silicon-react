@@ -411,6 +411,38 @@ header #sign-in {
 header #logo {
   height: 3em;
 }
+header .mobile-menu {
+  position: relative; /* Behåll navbarens position */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .mobile-menu .menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 700%;
+  background-color: var(--color-bg);
+  box-shadow: var(--box-shadow);
+  border-top: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000; /* Så att den syns ovanför annan layout */
+}
+header .mobile-menu .menu-dropdown .nav-link {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+header .mobile-menu .menu-dropdown .nav-link:hover {
+  color: var(--color-primary);
+}
+@media (min-width: 1400px) {
+  header .mobile-menu {
+    display: none;
+  }
+}
 
 #hero {
   background-color: var(--color-bg);
@@ -421,6 +453,12 @@ header #logo {
 @media (min-width: 768px) {
   #hero {
     padding-bottom: 0;
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 1400px) {
+  #hero {
+    padding-top: 0rem;
   }
 }
 #hero .container {
@@ -1552,6 +1590,11 @@ header #logo {
   width: 50%;
   margin-top: 3rem;
 }
+@media (max-width: 768px) {
+  #contact .grid-container .form-container .thank-you {
+    padding: 0;
+  }
+}
 
 #location {
   padding: 10rem;
@@ -1559,6 +1602,7 @@ header #logo {
 @media (max-width: 768px) {
   #location {
     padding: 5rem;
+    padding-top: 10rem;
   }
 }
 #location .container {
