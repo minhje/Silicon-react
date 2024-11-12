@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ConsultationForm = () => {
   const [options, setOptions] = useState([{ id: 1, text: "Specialist 1" }, { id: 2, text: "Specialist 2" }]) 
-  const [formData, setFormData] = useState({fullName: '', email: '', specialist: options[0].id });
+  const [formData, setFormData] = useState({fullName: '', email: '', specialist: options[0].text });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -36,7 +36,13 @@ const ConsultationForm = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    setFormData({ ...formData, [name]: value });
+    if (name === "specialist") {
+      // Använd `text`-värdet istället för `id`
+      const selectedOption = options.find(option => option.id === parseInt(value));
+      setFormData({ ...formData, [name]: selectedOption.text });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
     validateField(name, value);
   }
 
@@ -45,7 +51,6 @@ const ConsultationForm = () => {
 
     if (validateForm()) {
       console.log(formData)
-      
 
         const res = await fetch(
           'https://win24-assignment.azurewebsites.net/api/forms/contact',
@@ -58,7 +63,7 @@ const ConsultationForm = () => {
     
     if (res.ok) {
       setSubmitted(true)
-      setFormData({ fullName:'', email: '', specialist: options[0].id })
+      setFormData({ fullName:'', email: '', specialist: options[0].text })
 
   }
 }
@@ -107,7 +112,7 @@ const handleOK = () => {
             <select
               id="specialist"
               name="specialist"
-              value={formData.specialist}
+              value={options.find(option => option.text === formData.specialist)?.id || options[0].id}
               onChange={handleInputChange}
               required
             >
