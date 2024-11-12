@@ -35,6 +35,7 @@ const ConsultationForm = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
     setFormData({ ...formData, [name]: value });
     validateField(name, value);
   }
@@ -43,6 +44,9 @@ const ConsultationForm = () => {
     e.preventDefault();
 
     if (validateForm()) {
+      console.log(formData)
+      
+
         const res = await fetch(
           'https://win24-assignment.azurewebsites.net/api/forms/contact',
           {
@@ -54,7 +58,7 @@ const ConsultationForm = () => {
     
     if (res.ok) {
       setSubmitted(true)
-      setFormData({ fullName:'', email: '', specialist:'' })
+      setFormData({ fullName:'', email: '', specialist: options[0].id })
 
   }
 }
