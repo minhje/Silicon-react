@@ -1,3 +1,5 @@
+// Denna komponent är skriven med hjälp av chat gpt. Valisering av formulär har gjorts med hjälp från det inspelade materialet på omniway. 
+
 import React, { useState } from 'react';
 
 const ConsultationForm = () => {
@@ -37,7 +39,6 @@ const ConsultationForm = () => {
     const { name, value } = e.target;
 
     if (name === "specialist") {
-      // Använd `text`-värdet istället för `id`
       const selectedOption = options.find(option => option.id === parseInt(value));
       setFormData({ ...formData, [name]: selectedOption.text });
     } else {
