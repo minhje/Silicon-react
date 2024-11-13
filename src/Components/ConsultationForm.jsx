@@ -113,6 +113,7 @@ const handleOK = () => {
             <select
               id="specialist"
               name="specialist"
+              aria-label="Choose specialist"
               value={options.find(option => option.text === formData.specialist)?.id || options[0].id}
               onChange={handleInputChange}
               required

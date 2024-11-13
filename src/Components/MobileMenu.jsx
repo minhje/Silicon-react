@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import Navlinks from './Navlinks';
 
-const NavLinks = () => {
-  return (
-    <>
-      <NavLink className="nav-link" to="/features">Features</NavLink>
-      <NavLink className="nav-link" to="/contact">Contact</NavLink>
-    </>
-  );
-};
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +19,11 @@ const MobileMenu = () => {
         <i className={`fa-solid ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
       </button>
 
-      {isOpen && (
-        <div className="menu-dropdown">
-          <NavLinks />
-        </div>
-      )}
+      {isOpen && <div className="menu-overlay" onClick={toggleNavbar}></div>}
+
+      <div className={`menu-dropdown ${isOpen ? 'open' : ''}`}>
+        < Navlinks onLinkClick={toggleNavbar}/>
+      </div>
     </nav>
   );
 };

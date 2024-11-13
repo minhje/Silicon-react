@@ -8,7 +8,7 @@ const DarkmodeSwitch = () => {
     <div id="darkmode-toggle-switch" className="btn-toggle-switch">
     <span className="label"> Dark Mode</span>
 
-    <label htmlFor="darkmode-switch" className="toggle-switch">
+    <label htmlFor="darkmode-switch" className="toggle-switch" aria-label="Darkmode switch">
 
         <input 
           id="darkmode-switch" 

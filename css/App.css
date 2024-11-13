@@ -412,36 +412,42 @@ header #logo {
   height: 3em;
 }
 header .mobile-menu {
-  position: relative; /* Behåll navbarens position */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .mobile-menu .menu-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 700%;
-  background-color: var(--color-bg);
-  box-shadow: var(--box-shadow);
-  border-top: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  z-index: 1000; /* Så att den syns ovanför annan layout */
-}
-header .mobile-menu .menu-dropdown .nav-link {
-  display: block;
-  padding: 8px 12px;
-  color: var(--color-text-heading);
-  text-decoration: none;
-}
-header .mobile-menu .menu-dropdown .nav-link:hover {
-  color: var(--color-primary);
+  position: relative;
 }
 @media (min-width: 1400px) {
   header .mobile-menu {
     display: none;
   }
+}
+header .mobile-menu .menu-overlay {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-bg);
+  z-index: 5;
+}
+header .mobile-menu .menu-dropdown {
+  position: fixed;
+  right: -100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+header .mobile-menu .menu-dropdown.open {
+  transform: translateX(-100%);
+}
+header .mobile-menu .nav-link {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
 }
 
 #hero {
@@ -666,6 +672,7 @@ header .mobile-menu .menu-dropdown .nav-link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 @media (min-width: 1400px) {
   #features #brands .brand-box {
@@ -1494,8 +1501,9 @@ header .mobile-menu .menu-dropdown .nav-link:hover {
 #contact .grid-container .contact-us .text-content {
   width: 60%;
 }
-#contact .grid-container .contact-us .text-content h3 {
+#contact .grid-container .contact-us .text-content h2 {
   margin-bottom: 0.8rem;
+  font-size: 1.3rem;
 }
 #contact .grid-container .contact-us .text-content p {
   margin-bottom: 1rem;
@@ -1557,6 +1565,9 @@ header .mobile-menu .menu-dropdown .nav-link:hover {
     height: 50%;
   }
 }
+#contact .grid-container .form-container #consult-form input option, #contact .grid-container .form-container #consult-form select option {
+  background-color: var(--accordion-background);
+}
 #contact .grid-container .form-container #consult-form span {
   margin-top: -2.5rem;
   font-size: 0.8rem;
@@ -1589,6 +1600,7 @@ header .mobile-menu .menu-dropdown .nav-link:hover {
 #contact .grid-container .form-container .thank-you button {
   width: 50%;
   margin-top: 3rem;
+  border: transparent;
 }
 @media (max-width: 768px) {
   #contact .grid-container .form-container .thank-you {
