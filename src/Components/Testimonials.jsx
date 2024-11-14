@@ -9,7 +9,9 @@ const Testimonials = () => {
         const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials');
         const data = await res.json();
         setReviews(data);
-      } catch (error) {
+      } 
+      
+      catch (error) {
         console.error('Error fetching reviews:', error);
       }
     };
@@ -35,11 +37,12 @@ const Testimonials = () => {
             <i className="fa-solid fa-quote-left"></i>
             </div>
             
+            {/* Skrivet med hjälp av chatGPT */}
               <div className="starRating"> 
                 {Array(item.starRating).fill().map((_, i) => (
                   <i key={`filled-${i}`} className="fa-solid fa-star"></i>
                 ))}
-                {/* Renderar tomma stjärnor vid mindre betyg än 5*/}
+                
                 {Array(5 -item.starRating).fill().map((_, i) => (
                   <i key={`empty-${i}`} className="fa-regular fa-star"></i>))} 
               </div>

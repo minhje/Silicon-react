@@ -1,4 +1,4 @@
-// Denna komponent är skriven med hjälp av chat gpt. Valisering av formulär har gjorts med hjälp från det inspelade materialet på omniway. 
+// Denna komponent är skriven med hjälp av chat gpt. Validering av formulär har gjorts med hjälp från det inspelade materialet på omniway. 
 
 import React, { useState } from 'react';
 

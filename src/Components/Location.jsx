@@ -8,7 +8,7 @@ const Location = () => {
     <section id='location'>
     <div className='container'>
         <div className="map">
-            <img src={Map} alt="" />
+            <img src={Map} alt="Google map" />
         </div>
 
         <div className="contact-info">

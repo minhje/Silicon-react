@@ -1,3 +1,5 @@
+// Kod skriven tillsammans med chatGTP
+
 import React, { useState } from 'react';
 import Navlinks from './Navlinks';
 

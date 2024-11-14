@@ -28,7 +28,7 @@ const Accordion = () => {
          
           <div className="title" onClick={() => handleToggle(index)}>
             <p>{item.title}</p>  {/* Hämtar title från API */}
-            <button className="btn-round">
+            <button className="btn-round" aria-label="Button to open answer">
               <i className={`fa-solid fa-chevron-${openIndex === index ? 'up' : 'down'}`}></i>
             </button>
           </div>
